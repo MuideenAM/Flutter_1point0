@@ -4,7 +4,12 @@ void main() {
   runApp(HelloWorldApp());
 }
 
-class HelloWorldApp extends StatelessWidget {
+class HelloWorldApp extends StatefulWidget {
+  @override
+  _HelloWorldAppState createState() => _HelloWorldAppState();
+}
+
+class _HelloWorldAppState extends State<HelloWorldApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -41,7 +46,7 @@ class HelloWorldApp extends StatelessWidget {
                 ),
               ),
               Expanded(
-                child: Row(
+                child: Wrap(
                   children: [
                     Container(
                       height: 200,
